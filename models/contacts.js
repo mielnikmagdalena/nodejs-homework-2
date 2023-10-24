@@ -5,9 +5,9 @@ import path from "path";
 
 const contactsPath = path.join(process.cwd(), "models", "contacts.json");
 
-export function listContacts() {
+export async function listContacts() {
   try {
-    const data = fs.readFile(contactsPath, "utf-8");
+    const data = await fs.readFile(contactsPath, "utf-8");
     const contacts = JSON.parse(data);
     return contacts;
   } catch (error) {
