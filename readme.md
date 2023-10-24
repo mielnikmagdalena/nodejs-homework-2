@@ -1,31 +1,13 @@
-## GoIT Node.js Course Template Homework
+Node.js-homework-2
 
-Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
-Форк створить репозиторій на вашому http://github.com
+1. Zawarty kod bazujący na REST API służy do pracy ze zbiorem kontaktów, zebranych w pliku contacts.json.
 
-Додайте ментора до колаборації
+2. Na nowej gałęzi hw2 z gałęzi master została sworzona dana aplikacja.
 
-Для кожної домашньої роботи створюйте свою гілку.
+3. W danym projekcie zostały zastosowane takie moduły jak: express, morgan oraz cors.
 
-- hw02
-- hw03
-- hw04
-- hw05
-- hw06
+4. W osobnym katalogu controllers/contacts zostały utworzone wszystkie potrzebne pliki (każdy osobny endpoint) do pracy z routing (@ GET /api/contacts; @ GET /api/contacts/:id; @ POST /api/contacts; @ DELETE /api/contacts/:id;@ PUT /api/contacts/:id ).
 
-Кожна нова гілка для др повинна робитися з master
+5. Dla tras, które przyjmują dane (POST i PUT) została zastosowana walidacja. Do walidacji został wykorzystany pakiet joi.
 
-Після того, як ви закінчили виконувати домашнє завдання у своїй гілці, необхідно зробити пулл-реквест (PR). Потім додати ментора для рев'ю коду. Тільки після того, як ментор заапрувить PR, ви можете виконати мердж гілки з домашнім завданням у майстер.
-
-Уважно читайте коментарі ментора. Виправте зауваження та зробіть коміт у гілці з домашнім завданням. Зміни підтягнуться у PR автоматично після того, як ви відправите коміт з виправленнями на github
-Після виправлення знову додайте ментора на рев'ю коду.
-
-- При здачі домашньої роботи є посилання на PR
-- JS-код чистий та зрозумілий, для форматування використовується Prettier
-
-### Команди:
-
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+6. Aby odpalić daną aplikację należy w terminalu VSC wprowadzić komendę: npm run start
