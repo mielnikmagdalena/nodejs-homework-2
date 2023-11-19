@@ -2,6 +2,8 @@ import User from "#models/userModel.js";
 import { registerNewUserSchema } from "#validators/registerNewUserSchema.js";
 import bcrypt from "bcrypt";
 import gravatar from "gravatar";
+import sendVerificationEmail from "./mailer.js";
+import generateVerificationToken from "#middleware/generateVerificationToken.js";
 
 export async function registerNewUser(req, res) {
   const { email, password } = req.body;
@@ -15,8 +17,10 @@ export async function registerNewUser(req, res) {
   const hashedPassword = await bcrypt.hash(password, salt);
   try {
     const newUser = new User({ email, password: hashedPassword, avatarURL });
-    await newUser.save();
-
+    const savedUser = await newUser.save();
+    // Generowanie i wysłanie e-maila weryfikacyjnego
+    const verificationToken = generateVerificationToken(); // Funkcja generująca token weryfikacyjny
+    sendVerificationEmail(email, verificationToken);
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
