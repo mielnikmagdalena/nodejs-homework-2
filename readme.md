@@ -1,31 +1,31 @@
-## GoIT Node.js Course Template Homework
+## Table of contents:
 
-Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
-Форк створить репозиторій на вашому http://github.com
+# General info
 
-Додайте ментора до колаборації
+# Technologies
 
-Для кожної домашньої роботи створюйте свою гілку.
+# Setup
 
-- hw02
-- hw03
-- hw04
-- hw05
-- hw06
+# General info:
 
-Кожна нова гілка для др повинна робитися з master
+In this project we use REST API to work with a set of contacts. User authentication/authorization logic was used here by using JWT. Loading of a user avatar by using Multer was added, too.
 
-Після того, як ви закінчили виконувати домашнє завдання у своїй гілці, необхідно зробити пулл-реквест (PR). Потім додати ментора для рев'ю коду. Тільки після того, як ментор заапрувить PR, ви можете виконати мердж гілки з домашнім завданням у майстер.
+# Technologies applied:
 
-Уважно читайте коментарі ментора. Виправте зауваження та зробіть коміт у гілці з домашнім завданням. Зміни підтягнуться у PR автоматично після того, як ви відправите коміт з виправленнями на github
-Після виправлення знову додайте ментора на рев'ю коду.
+Node.js
+Express.js
+MongoDB
+Mongoose
+Nodemailer
+JWT (JSON Web Tokens)
+Bcrypt
+Joi
+dotenv
+Gravatar
+Jimp
+Multer
+uuid
 
-- При здачі домашньої роботи є посилання на PR
-- JS-код чистий та зрозумілий, для форматування використовується Prettier
+# Setup:
 
-### Команди:
-
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+To setup this app use the following command: npm run start
