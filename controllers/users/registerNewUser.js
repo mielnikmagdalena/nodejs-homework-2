@@ -18,7 +18,7 @@ export async function registerNewUser(req, res) {
   try {
     const newUser = new User({ email, password: hashedPassword, avatarURL });
     const savedUser = await newUser.save();
-    // Generowanie i wysłanie e-maila weryfikacyjnego
+
     const verificationToken = generateVerificationToken(); // Funkcja generująca token weryfikacyjny
     sendVerificationEmail(email, verificationToken);
     res.status(201).json({ message: "User registered successfully" });

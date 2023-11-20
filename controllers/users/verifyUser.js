@@ -8,7 +8,6 @@ export async function verifyUser(req, res) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Ustawienie verificationToken na null i verify na true
     user.verificationToken = null;
     user.verify = true;
     await user.save();
